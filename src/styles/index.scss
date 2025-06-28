@@ -2,7 +2,7 @@ $daySize: 100px;
 $countDays: 31;
 $gapValue: 1px;
 $padding: 10px;
-$calendarWidth: $daySize * 7 + $gepValue * 6 + $padding * 2;
+$calendarWidth: $daySize * 7 + $gapValue * 6 + $padding * 2;
 $daysOfWeek: ('mon' 0, 'tue' 1, 'wed' 2, 'thu' 3, 'fri' 4, 'sat' 5, 'sun' 6);
 $startDay: 'sun';
 
@@ -21,7 +21,7 @@ body {
   flex-wrap: wrap;
   box-sizing: border-box;
   padding: $padding;
-  gap: $gepValue;
+  gap: $gapValue;
   width: $calendarWidth;
 
   &__day {
