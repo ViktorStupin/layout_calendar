@@ -1,6 +1,6 @@
 $daySize: 100px;
 $countDays: 31;
-$gepValue: 1px;
+$gapValue: 1px;
 $padding: 10px;
 $calendarWidth: $daySize * 7 + $gepValue * 6 + $padding * 2;
 $daysOfWeek: ('mon' 0, 'tue' 1, 'wed' 2, 'thu' 3, 'fri' 4, 'sat' 5, 'sun' 6);
@@ -44,7 +44,7 @@ body {
 }
 
 @for $i from 1 through 31 {
-  .calendar--month-length-#{$i} :nth-child(-n + #{$i}) {
+  .calendar--month-length-#{$i} > .calendar__day:nth-child(-n + #{$i}) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +55,7 @@ body {
 }
 
 @each $day, $offset in $daysOfWeek {
-  .calendar--start-day-#{$day} :first-child {
+  .calendar--start-day-#{$day} > .calendar__day:first-child {
     margin-left: calc(($offset * 100px) + (1px * $offset));
   }
 }
